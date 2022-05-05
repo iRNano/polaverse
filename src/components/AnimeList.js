@@ -1,6 +1,7 @@
 import { Fragment } from "react"
 
 const AnimeList = ({animes}) => {
+    console.log(animes)
     return(
         <Fragment>
          {animes.map(anime => {

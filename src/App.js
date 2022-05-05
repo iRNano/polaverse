@@ -1,12 +1,17 @@
 import { Fragment } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import Animes from './components/Animes';
+
+import AppRoutes from './config/Routes';
 import Header from './layouts/Header';
 function App() {
   return (
     <Fragment>
     <Header />
-    <Animes />
+    <Router>
+      <AppRoutes />
+    </Router>
+    {/* <Animes /> */}
     </Fragment>
     // <div className="App">
       

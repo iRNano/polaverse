@@ -27,3 +27,12 @@
     object-fit: cover;
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
   }
+
+ul{
+  display: flex;
+  list-style: none;
+}
+
+li{
+  padding-right: 1em;
+}

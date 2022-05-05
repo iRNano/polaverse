@@ -5,7 +5,12 @@ const Header = () => {
         <Fragment>
             <header className={classes.header}>
                 <h1>Polaverse</h1>
-                
+                <div>
+                    <ul className={classes['header-links']}>
+                        <li>HOME</li>
+                        <li>SEARCH</li>
+                    </ul>
+                </div>
             </header>
             <div>
                 <p>some shjt</p>
