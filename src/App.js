@@ -7,8 +7,8 @@ import Header from './layouts/Header';
 function App() {
   return (
     <Fragment>
-    <Header />
     <Router>
+    <Header />
       <AppRoutes />
     </Router>
     {/* <Animes /> */}

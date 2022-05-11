@@ -5,9 +5,9 @@ import Search from "../pages/Search";
 
 const AppRoutes = () => (
     <Routes>
-        <Route exact path="/" element={<Home />}>
-            <Route path=":animeId" element={<Anime />}/>
-        </Route>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/anime/:animeId" element={<Anime />}/>
+
         <Route path="/search" element={<Search />} />
     </Routes>
 )
