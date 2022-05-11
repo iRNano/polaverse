@@ -1,29 +1,30 @@
 import { Fragment } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import classes from './AnimeList.module.css'
 const AnimeList = ({animes}) => {
 
     let navigate = useNavigate();
     console.log(animes)
     return(
-        <Fragment>
+        <div className={classes.container}>
          {animes.map(anime => {
              return (
-                 <Link to={`/anime/${anime.mal_id}`}>
-                 <AnimeCard key={anime.mal_id} anime={anime} />
-                 </Link>
+                //  <Link to={`/anime/${anime.mal_id}`}>
+                    <AnimeCard onClick={()=>navigate(`/anime/${anime.mal_id}`)}key={anime.mal_id} anime={anime} />
+                //  </Link>
              )
          })}
-        </Fragment>
+        </div>
     )
 }
 
-const AnimeCard = ({anime}) => {
+const AnimeCard = ({onClick, anime}) => {
 
 
     return(
-        <article>
+        <article className={classes.card}onClick={onClick}>
             <figure>
-                <img  src={anime.images.jpg.image_url} alt="card image"></img>
+                <img  className={classes['card-image']} src={anime.images.jpg.image_url} alt="card"></img>
             </figure>
             <span>{anime.title}</span>
         </article>

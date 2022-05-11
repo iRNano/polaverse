@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <Fragment>
             <header className={classes.header}>
-                <h1>Polaverse</h1>
+                <h1 className={classes.brand}onClick={()=> navigate('/')}>Polaverse</h1>
                 <div>
                     <ul className={classes['header-links']}>
                         <li onClick={()=> navigate('/')}>HOME</li>
@@ -15,9 +15,9 @@ const Header = () => {
                     </ul>
                 </div>
             </header>
-            <div>
+            {/* <div>
                 <p>some shjt</p>
-            </div>
+            </div> */}
         </Fragment>
     )
 }

@@ -6,13 +6,14 @@ import AppRoutes from './config/Routes';
 import Header from './layouts/Header';
 function App() {
   return (
-    <Fragment>
+    <div className='App'>
     <Router>
     <Header />
       <AppRoutes />
     </Router>
     {/* <Animes /> */}
-    </Fragment>
+    </div>
+    // </Fragment>
     // <div className="App">
       
     // </div>

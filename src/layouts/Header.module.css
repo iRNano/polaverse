@@ -3,9 +3,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 5rem;
-    background-color: #8a2b06;
-    color: white;
+    height: 100px;
+    background-color: #fff;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,12 +27,33 @@
     object-fit: cover;
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
   }
-
+h1.brand{
+  margin-left:5em;
+}
 ul{
   display: flex;
   list-style: none;
+  margin-right: 10em;
 }
 
 li{
   padding-right: 1em;
+  cursor: pointer;
+}
+
+li:hover{
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  h1.brand{
+    margin-left: 0;
+  }
+  ul{
+    margin-right: 0;
+  }
+
+
+
 }

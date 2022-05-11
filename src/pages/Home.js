@@ -1,5 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import AnimeList from '../components/AnimeList'
+import Loading from "../components/Loading";
+import Container from "../layouts/Container";
 const Home = () => {
 
     const [topAnimes, setTopAnimes] = useState([])
@@ -19,9 +21,13 @@ const Home = () => {
     },[])
 
     return(
-        <div style={{display:'flex', width: '100%', 'min-height': '100vh', 'flex-wrap':'wrap'}}>
-            {topAnimes.length? <AnimeList animes={topAnimes}  /> : 'loading...'}
-        </div>
+        <Container>
+            {topAnimes.length? <AnimeList animes={topAnimes}  /> : <Loading />}
+            {/* <Loading /> */}
+        </Container>
+        // <div style={{display:'flex', width: '100%', 'min-height': '100vh', 'flex-wrap':'wrap'}}>
+            
+        // </div>
     )
 }
 
