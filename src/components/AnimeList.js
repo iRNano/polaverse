@@ -1,12 +1,14 @@
 import { Fragment } from "react"
-
+import { useNavigate } from "react-router-dom"
 const AnimeList = ({animes}) => {
+
+    let navigate = useNavigate();
     console.log(animes)
     return(
         <Fragment>
          {animes.map(anime => {
              return (
-                 <AnimeCard  key={anime.id}anime={anime} />
+                 <AnimeCard  onClick={() => navigate(`/${anime.mal_id}`)}key={anime.mal_id} anime={anime} />
              )
          })}
         </Fragment>
@@ -14,6 +16,8 @@ const AnimeList = ({animes}) => {
 }
 
 const AnimeCard = ({anime}) => {
+
+
     return(
         <article >
             <figure>
