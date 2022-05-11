@@ -2,12 +2,12 @@
     display:flex;
     /* flex-wrap: wrap; */
     max-width: 100%;
-    padding:1em;
+    padding:1em 10em;
 }
 
 .back{
     padding: 1em;
-    margin: 1em 0 0 3em;
+    margin: 1em 0 0 10em;
     /* padding: 2px 23px 2px 30px; */
     /* outline: 0; */
     background-color: #fff;
@@ -41,6 +41,8 @@ article{
     /* For mobile phones: */
     .anime {
         flex-wrap: wrap;
+        padding: 1em;
+        justify-content: center;
     }
 
     .figure{
@@ -48,7 +50,7 @@ article{
     }
 
     .figure img{
-        max-width: 350px;
+        max-width: 300px;
     }
 
     .back {
