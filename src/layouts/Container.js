@@ -1,10 +1,10 @@
 import classess from './Container.module.css';
 
-function Container(props) {
+function Container({ children }) {
   return (
     <div className={classess.container}>
       {/* <div className={classess.content}> */}
-      {props.children}
+      {children}
       {/* </div> */}
 
     </div>

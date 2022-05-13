@@ -7,18 +7,18 @@ function AnimeList({ animes }) {
   //   console.log(animes);
   return (
     <div className={classes.container}>
-      {animes.map((anime) => (
+      {animes.map((anime, index) => (
         //  <Link to={`/anime/${anime.mal_id}`}>
-        <AnimeCard onClick={() => navigate(`/anime/${anime.mal_id}`)} key={anime.mal_id} anime={anime} />
+        <AnimeCard onClick={() => navigate(`/anime/${anime.mal_id}`)} key={anime.mal_id} anime={anime} index={index} />
         //  </Link>
       ))}
     </div>
   );
 }
 
-function AnimeCard({ onClick, anime }) {
+function AnimeCard({ onClick, anime, index }) {
   return (
-    <div className={classes.card} onClick={onClick}>
+    <div className={classes.card} onClick={onClick} aria-hidden="true" role="button" tabIndex={index}>
       <figure>
         <img className={classes['card-image']} src={anime.images.jpg.image_url} alt="card" />
       </figure>

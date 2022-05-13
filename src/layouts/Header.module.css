@@ -45,6 +45,11 @@ li:hover{
   font-weight: bold;
 }
 
+a:visited, a:hover, a:active, a:link{
+  text-decoration: none;
+  color: black;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   h1.brand{

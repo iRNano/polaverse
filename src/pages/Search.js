@@ -37,6 +37,12 @@ function Search() {
     }
   }, [searchKeyword]);
 
+  const renderResult = () => {
+    let result;
+    if (searchResult.length) result = <AnimeList animes={searchResult} />;
+    else result = <p>No Item found</p>;
+    return result;
+  };
   return (
     <Container>
       <main className={classes.main}>
@@ -45,9 +51,7 @@ function Search() {
           <input onChange={searchHandler} placeholder="Search anime" />
         </div>
         <div className={classes.body}>
-          {searchLoading ? <h1>Loading...</h1> : (
-            searchResult.length ? <AnimeList animes={searchResult} /> : <p>No item found</p>
-          )}
+          {searchLoading ? <h1>Loading...</h1> : renderResult()}
         </div>
       </main>
     </Container>

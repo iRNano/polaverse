@@ -1,5 +1,5 @@
 // import { Fragment } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import classes from './Header.module.css';
 
 function Header() {
@@ -7,11 +7,13 @@ function Header() {
   return (
     <>
       <header className={classes.header}>
-        <h1 className={classes.brand} onClick={() => navigate('/')}>Polaverse</h1>
+        <div><h1 className={classes.brand} onClick={() => navigate('/')} aria-hidden="true">Polaverse</h1></div>
         <div>
           <ul className={classes['header-links']}>
-            <li onClick={() => navigate('/')}>HOME</li>
-            <li onClick={() => navigate('/search')}>SEARCH</li>
+            <Link to="/"><li>HOME</li></Link>
+            {/* <li onClick={() => navigate('/')}>HOME</li> */}
+            <Link to="/search"><li>SEARCH</li></Link>
+            {/* <li onClick={() => navigate('/search')}>SEARCH</li> */}
           </ul>
         </div>
       </header>
